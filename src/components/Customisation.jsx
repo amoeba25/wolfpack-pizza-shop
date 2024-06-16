@@ -12,15 +12,19 @@ const Customisation = ({ prices, selectedItems, setSelectedItems }) => {
   const handleIngredientChange = (event) => {
     const { value, checked } = event.target;
     const newIngredients = checked
-      ? [...selectedItems.ingredients, value]
+      ? selectedItems.ingredients.length < 5
+        ? [...selectedItems.ingredients, value]
+        : [...selectedItems.ingredients]
       : selectedItems.ingredients.filter((topping) => topping !== value);
     setSelectedItems({ ...selectedItems, ingredients: newIngredients });
   };
 
   return (
     <div className="customised-layout">
+      <h2>Veg Farmhouse</h2>
+      <p>Customize as per your needs</p>
       <div className="size-card">
-        <h3>Choose your size</h3>
+        <h3>Size</h3>
         {Object.keys(prices.size).map((size) => (
           <label key={size}>
             <input
@@ -36,7 +40,7 @@ const Customisation = ({ prices, selectedItems, setSelectedItems }) => {
       </div>
 
       <div className="size-card">
-        <h3>Choose your crust</h3>
+        <h3>Crust</h3>
         {Object.keys(prices.crust).map((crust) => (
           <label key={crust}>
             <input
@@ -52,7 +56,7 @@ const Customisation = ({ prices, selectedItems, setSelectedItems }) => {
       </div>
 
       <div className="topping-card">
-        <h3>Choose your topping</h3>
+        <h3>Topping [{selectedItems.ingredients.length}/5] </h3>
         {Object.keys(prices.topping).map((topping) => (
           <label key={topping}>
             <input
@@ -63,6 +67,7 @@ const Customisation = ({ prices, selectedItems, setSelectedItems }) => {
               onChange={handleIngredientChange}
             />
             {topping} (${prices.topping[topping]})
+            <br />
           </label>
         ))}
       </div>

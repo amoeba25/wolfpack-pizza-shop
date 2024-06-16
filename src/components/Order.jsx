@@ -6,8 +6,8 @@ import { prices } from "../priceList.js";
 const Order = () => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [selectedItems, setSelectedItems] = useState({
-    size: "",
-    crust: "",
+    size: "small",
+    crust: "thick",
     ingredients: [],
   });
 

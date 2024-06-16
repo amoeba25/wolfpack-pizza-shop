@@ -1,6 +1,11 @@
-import React from "react";
+import { useState } from "react";
 
 const PriceCard = ({ selectedItems, totalPrice, prices }) => {
+  const [submitState, setSubmitState] = useState("Add to cart");
+
+  const handleSubmit = () => {
+    setSubmitState("View Cart");
+  };
   return (
     <div className="pricecard">
       <h2>Price</h2>
@@ -25,6 +30,7 @@ const PriceCard = ({ selectedItems, totalPrice, prices }) => {
         ))}
       </ul>
       <h3>Total Price: ${totalPrice}</h3>
+      <button onClick={handleSubmit}>{submitState}</button>
     </div>
   );
 };
