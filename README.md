@@ -1,8 +1,11 @@
-# React + Vite
+# Pizza Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A frontend to showcase creating a pizza with customization. To run locally, follow the instructions below
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+`> git clone https://github.com/amoeba25/wolfpack-pizza-shop.git` <br>
+`> cd wolfpack-pizza-shop`
+<br>
+`> npm install`
+<br>
+`> npm run dev`
+<br>
