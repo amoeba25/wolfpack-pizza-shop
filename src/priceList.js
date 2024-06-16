@@ -13,7 +13,6 @@ export const prices = {
     sausage: 1,
     "fetta-cheese": 1,
     "steamed-broccoli": 1,
-    "blue-cheese": 1,
   },
   crust: { thin: 1, thick: 2, "pan-fresh": 3 },
 };

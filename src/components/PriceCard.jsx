@@ -1,27 +1,22 @@
 import { useState } from "react";
 
 const PriceCard = ({ selectedItems, totalPrice, prices }) => {
-  const [submitState, setSubmitState] = useState("Add to cart");
-
-  const handleSubmit = () => {
-    setSubmitState("View Cart");
-  };
   return (
     <div className="pricecard">
       <h2>Price</h2>
 
-      <p>
+      <p className="price-title">
         Size:{" "}
         {selectedItems.size &&
           `${selectedItems.size} ($${prices.size[selectedItems.size]})`}
       </p>
 
-      <p>
+      <p className="price-title">
         Crust:{" "}
         {selectedItems.crust &&
           `${selectedItems.crust} ($${prices.crust[selectedItems.crust]})`}
       </p>
-      <ul>
+      <ul className="price-title price-topping-list">
         Toppings:
         {selectedItems.ingredients.map((ingredient) => (
           <li key={ingredient}>
@@ -30,7 +25,6 @@ const PriceCard = ({ selectedItems, totalPrice, prices }) => {
         ))}
       </ul>
       <h3>Total Price: ${totalPrice}</h3>
-      <button onClick={handleSubmit}>{submitState}</button>
     </div>
   );
 };

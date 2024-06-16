@@ -1,6 +1,12 @@
 /* Navbar styles */
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+  --main-background : #F0EBE8; 
+  --secondary-background: #F1E9E4; 
+  --orange : #E4866B; 
+}
+
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -37,8 +43,31 @@
 }
 
 .navbar-link:hover {
-  color: #ff0008;
+  color: var(--orange);
 }
+
+/* Ordering */
+.order{
+  background-color: var(--main-background);
+  border: 20px;
+}
+
+/* Order main layout */
+.order {
+  margin: auto;
+  max-width: 1200px;
+}
+
+.title {
+  border-bottom: 1px #e0d9d9 solid;
+  padding: 1em;
+}
+
+.content {
+  display: flex;
+  padding: 0 2em;
+}
+
 
 /* Customisations */
 input[type="radio"] , input[type = "checkbox"] {
@@ -46,23 +75,22 @@ input[type="radio"] , input[type = "checkbox"] {
   vertical-align: middle;
 }
 .customised-layout {
-  background-color: #f8f8f8;
   padding: 15px;
   border-radius: 10px;
+  width: 900px;
 }
 
-.title {
-  border-bottom: 1px #e0d9d9 solid;
-  padding: 10px 0;
-}
 
 .pizza-title {
   font-size: 1rem;
   margin: 5px 0;
+  color: var(--orange) ;
+
 }
 .pizza-subtitle {
   font-size: 1rem;
   font-weight: 500;
+  color: #333;
 }
 .card {
   margin: 1em 0;
@@ -70,6 +98,11 @@ input[type="radio"] , input[type = "checkbox"] {
 .custom-title {
   font-size: 1rem;
   font-weight: 500;
+  color: var(--orange); 
+}
+.all-card {
+  background-color: var(--secondary-background);
+  padding: 0 1em;
 }
 .radio-label {
   font-size: 0.9rem;
@@ -82,55 +115,73 @@ input[type="radio"] , input[type = "checkbox"] {
 .checkbox-input {
   margin-right: 5px;
 }
-
-
-/* Order main layout */
-.order {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  max-width: 1000px;
+.topping-data {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: left;
 }
+.checkbox-label {
+  font-size: 0.9rem;
 
-/* Customisation  */
-.customised-layout {
-  width: 700px;
 }
 
 /* Pricecard */
 .pricecard {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
+  /* border: 1px solid #ccc; */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  padding: 15px;
   width: 300px;
-  margin: 20px;
-  margin-left: 100px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 300px;
+  background-color: var(--secondary-background);
+  margin-top: 20px;
   
 }
 
 .pricecard h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: 20px;
-  text-align: center;
-  color: #333;
+  text-align: left;
+  color: var(--orange);
+  font-weight: 500;
 }
 
-.pricecard p {
-  font-size: 1.1em;
+.price-title {
+  font-size: 0.8em;
   margin: 10px 0;
-  color: #666;
-}
-
-.pricecard p strong {
-  color: #333;
+  color: var(--orange);
 }
 
 .pricecard h3 {
-  font-size: 1.3em;
+  font-size: 1em;
   margin-top: 20px;
   text-align: center;
-  color: #e74c3c;
+  color: var(--orange);
+}
+
+.price-topping-list {
+  padding: 0;
+  list-style: none;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+.submit-btn {
+  text-align: center;
+  background-color: var(--orange);
+  padding: 0.5em 3em;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+
+}
+.submit-btn:hover {
+  cursor: pointer;
+  background-color: #d66b4d;
 }
