@@ -15,5 +15,5 @@ export const prices = {
     "steamed-broccoli": 1,
     "blue-cheese": 1,
   },
-  crust: { thin: 0, thick: 2, "pan-fresh": 3 },
+  crust: { thin: 1, thick: 2, "pan-fresh": 3 },
 };

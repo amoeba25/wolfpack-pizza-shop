@@ -1,9 +1,9 @@
 /* Navbar styles */
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
-  font-family: 'Roboto';
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
 }
 .navbar {
   display: flex;
@@ -41,8 +41,47 @@
 }
 
 /* Customisations */
+input[type="radio"] , input[type = "checkbox"] {
+  margin-top: -1px;
+  vertical-align: middle;
+}
+.customised-layout {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+}
 
+.title {
+  border-bottom: 1px #e0d9d9 solid;
+  padding: 10px 0;
+}
 
+.pizza-title {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+.pizza-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.card {
+  margin: 1em 0;
+}
+.custom-title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.radio-label {
+  font-size: 0.9rem;
+  margin-right: 0.8em;
+  text-align: center;
+}
+.radio-input {
+  margin-left: 5px
+}
+.checkbox-input {
+  margin-right: 5px;
+}
 
 
 /* Order main layout */
